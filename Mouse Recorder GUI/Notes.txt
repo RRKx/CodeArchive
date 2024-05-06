@@ -1,0 +1,17 @@
+pynput.keyboard --> Listener, Key (For special keys)
+pynput.mouse --> Listener, Controller (for position)
+
+mouse listener passes three arguments 
+--> x, y, button, pressed
+--> button is enum, use .name
+
+pyautogui --> moveTo(x, y, duration), click(x, y, duration=..., button=...)
+
+Circular imports --> when two or more modules depend on each other
+
+threading --> Thread(target=function_name), no brackets for function name
+--> .start(), .stop() (this only applies for Listener, from pynput), .join()
+--> start() creates the thread and allows other executes in the main thread to execute
+--> .join() creates the thread and it has to finish execution for the other statements in the main thread to execute
+--> .is_alive() to check if a thread is active or not
+--> for normal threads, you need a flag to allow the program to know when to start and stop the thread, use return False to stop the thread
